@@ -1,13 +1,100 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #d3cce3, #e9e4f0);
+}
+
+.calculator {
+  min-width: 400px;
+  width: 23vw;
+  height: 65vh;
+  background-color: white;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+}
+
+/* Display */
+
+.calculator-display {
+  height: 25%;
+  padding: 2px;
+  color: #e3d8d8;
+  margin-bottom: 18px;
+  background-color: black;
+  font-size: 1.4rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  border-radius: 10px 10px 0 0;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 45px;
+  font-family: "Lucida Console", sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+.rest {
+  margin: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+/* Styling buttons */
+button {
+  height: 3.29rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: rgb(198 194 194 / 88%);
+  font-size: 1.1rem;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translate(0, 0.15rem);
+}
+
+/* styling  buttons other than numbered buttons */
+.operator {
+  background-color: rgb(49 48 48 / 72%);
+  color: rgb(239, 233, 233);
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.clear {
+  background-color: rgb(214, 17, 17);
+}
+
+.equal-sign {
+  grid-row: 2/5;
+  grid-column: 4/5;
+  background-color: rgb(13 192 121);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#equal {
+  background-color: rgb(13 192 121);
+  width: 100%;
+  height: 100%;
 }
